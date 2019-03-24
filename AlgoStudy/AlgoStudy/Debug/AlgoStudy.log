@@ -1,3 +1,2 @@
 ﻿  main.c
-e:\git\algorithmstudy\algostudy\algostudy\main.c(6): warning C4101: 'a' :참조되지 않은 지역 변수입니다.
   AlgoStudy.vcxproj -> E:\Git\AlgorithmStudy\AlgoStudy\Debug\AlgoStudy.exe
