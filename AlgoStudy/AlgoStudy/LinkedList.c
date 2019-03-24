@@ -24,15 +24,21 @@ int insert(List **head, int index, int data) {	/// index (0 to n)
 		return -1;
 	}
 
-	List *node = Init(data);
+	List *newNode = Init(data);
 	
 	if (index == 0) {
 		List *second = (*head);
-		head = &node;
+		head = &newNode;
 		(*head)->next = second;
 	}
 
-	else if(index == )
+	else {
+		List **node = head;
 
-
+		for (int i = 0; i < index; i++) {
+			node = &((*node)->next);
+		}
+		(*node)->next = newNode;
+	}
+	return 1;
 }
