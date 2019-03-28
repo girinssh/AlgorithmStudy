@@ -2,16 +2,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct List{
+typedef struct Node{
 	int data;
-	struct List* next;
+	struct Node* next;
+}Node;
+
+typedef struct List {
+	int size;
+	Node *head;
 }List;
 
-List* Init_List(int data);
+List Init_List(void);
 
-int AppendNode(List **head, int data);
-int InsertNode(List **head, int index, int data);
+int AppendNode(List *list, int data);
+int InsertNode(List *list, int index, int data);
+					
+void PrintList(List *list);
+				
+int RemoveNode(List *list, int index);
 
-void PrintList(List **head);
-
-int RemoveNode(List **head, int index);
+int Retrieve(List *list, int position);

@@ -1,103 +1,112 @@
 #include "LinkedList.h"
-#define MAX_INDEX Length(*head)
-List* Init_List(int data) {
-	List* node = (List*)malloc(sizeof(List));
-	node->data = data;
-	node->next = NULL;
+#define MAX_INDEX Length(list)
+List Init_List(void) {
+	List l;
+	l.size = 0;
+	l.head = NULL;
 
-	return node;
+	return l;
 }
 
-int Length(List *head) {
-	int L = 0;
-	List *node = head;
-	while (node != NULL) {
+int Length(List *list) {
+	return list->size;
+}
+
+int AppendNode(List *list, int data) {
+	Node *newNode = (Node*)malloc(sizeof(Node));
+	newNode->data = data;
+	newNode->next = NULL;
+
+	if (list->head == NULL) {
+		list->head = newNode;
+		list->size += 1;
+		return 1;
+	}
+
+	Node *node = list->head;
+
+	while (node->next != NULL) {
 		node = node->next;
-		L++;
 	}
-	return L;
-}
-
-int AppendNode(List **head, int data) {
-
-	if (head == NULL) {
-		printf("List is NULL\n");
-		return -1;
-	}
-
-	List *newNode = Init_List(data);
-	List **node = head;
-
-	while ((*node)->next != NULL) {
-		node = &((*node)->next);
-	}
-	(*node)->next = newNode;
-
+	node->next = newNode;
+	list->size += 1;
 	return 1;
 }
 
-int InsertNode(List **head, int index, int data) {	/// index (0 to n)
+int InsertNode(List *list, int index, int data) {	/// index (0 to n)
 	if (index > MAX_INDEX || index < 0) {
 		printf("Out Of Range Error : index %d\n", index);
 		return -1;
 	}
 
-	List *newNode = Init_List(data);
-	
+	Node *newNode = (Node*)malloc(sizeof(Node));
+	newNode->data = data;
+	newNode->next = NULL;
+
 	if (index == 0) {
-		List *second = *head;
-		List **first = head;
-		(*first) = newNode;
-		(*first)->next = second;
+		newNode->next = list->head;
+		list->head = newNode;
 	}
 
-	else if (index == MAX_INDEX) { /// This part is the same as func AppendNode(head, data)
-		List **node = head;
-
-		while ((*node)->next != NULL) {
-			node = &((*node)->next);
-		}
-		(*node)->next = newNode;
-	}
 	else {
-		List **node = head;
-
+		Node *node = list->head;
 		for (int i = 0; i < index-1; i++) {
-			node = &((*node)->next);
+			node = node->next;
 		}
-		newNode->next = (*node)->next;
-		(*node)->next = newNode;
 	}
+	list->size += 1;
 	return 1;
 }
 
-void PrintList(List **head) {
-	List *l = *head;
+void PrintList(List *list) {
+	Node *n = list->head;
 
-	while (l != NULL) {
-		printf("%d ", l->data);
-		l = l->next;
+	while (n != NULL) {
+		printf("%d ", n->data);
+		n = n->next;
 	}
 	puts("");
 }
 
-int RemoveNode(List **head, int index) {
-	List **node = head;
+int RemoveNode(List *list, int index) {
+	Node *node = list->head;
 
 	if (index < 0 || index > MAX_INDEX) {
 		printf("Out Of Range Error : index %d\n", index);
 		return -1;
 	}
 
+	Node *del_node;
 	if (index == 0) {
-		(*head) = (*node)->next;
+		del_node = list->head;
+		list->head = del_node->next;
 	}
 	else {
-		for (int i = 0; i < index - 1; i++) {
-			node = &((*node)->next);
+		Node *pre_node = list->head;
+		for (int i = 1; i < index - 1; i++) {
+			pre_node = pre_node->next;
 		}
-		(*node)->next = (*node)->next->next;
+		del_node = pre_node->next;
+		pre_node->next = del_node->next;
 	}
-
+	free(del_node);
+	list->size -= 1;
 	return 1;
+}
+
+int Retrieve(List *list, int position) {
+	if (isEmpty(list)) {
+		printf("list empty\n");
+	}
+	else if (position < 1 || position > list->size) {//blank
+		printf("out of range\n");
+	}
+	else {
+		Node *p = list->head;//blank
+		for (int i = 1; i < position/*blank*/; i++) {
+			p = p->next;//blank
+		}
+
+		return p->data;//blank
+	}
 }

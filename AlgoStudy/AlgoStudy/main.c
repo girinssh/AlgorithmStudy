@@ -4,17 +4,16 @@
 #include "LinkedList.h"
 
 int main(void) {
-	int n, init;
+	int n;
 
 	printf("처음 리스트의 크기를 입력해주세요 : ");
 	scanf("%d", &n);
 
 	printf("리스트에 들어갈 숫자들을 입력해주세요 : ");
-	scanf("%d", &init);
 
 	//리스트 초기화 부분
-	List *a = Init_List(init);
-	for (int i = 0; i < n - 1; i++) {
+	List a = Init_List();
+	for (int i = 0; i < n; i++) {
 		int tmp;
 		scanf("%d", &tmp);
 		AppendNode(&a, tmp);
@@ -23,6 +22,7 @@ int main(void) {
 	while (1) {
 		int sel;
 		{
+			fflush(stdout);
 			puts("1.노드추가");
 			puts("2.노드삽입");
 			puts("3.노드제거");
