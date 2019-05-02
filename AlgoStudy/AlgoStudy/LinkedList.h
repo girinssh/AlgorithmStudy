@@ -21,4 +21,4 @@ void PrintList(List *list);
 				
 int RemoveNode(List *list, int index);
 
-int Retrieve(List *list, int position);
+//int Retrieve(List *list, int position);

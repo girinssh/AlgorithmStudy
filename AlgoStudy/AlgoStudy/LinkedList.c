@@ -53,6 +53,7 @@ int InsertNode(List *list, int index, int data) {	/// index (0 to n)
 		for (int i = 0; i < index-1; i++) {
 			node = node->next;
 		}
+		
 	}
 	list->size += 1;
 	return 1;
@@ -94,19 +95,19 @@ int RemoveNode(List *list, int index) {
 	return 1;
 }
 
-int Retrieve(List *list, int position) {
-	if (isEmpty(list)) {
-		printf("list empty\n");
-	}
-	else if (position < 1 || position > list->size) {//blank
-		printf("out of range\n");
-	}
-	else {
-		Node *p = list->head;//blank
-		for (int i = 1; i < position/*blank*/; i++) {
-			p = p->next;//blank
-		}
-
-		return p->data;//blank
-	}
-}
+//int Retrieve(List *list, int position) {
+//	if (isEmpty(list)) {
+//		printf("list empty\n");
+//	}
+//	else if (position < 1 || position > list->size) {//blank
+//		printf("out of range\n");
+//	}
+//	else {
+//		Node *p = list->head;//blank
+//		for (int i = 1; i < position/*blank*/; i++) {
+//			p = p->next;//blank
+//		}
+//
+//		return p->data;//blank
+//	}
+//}
