@@ -12,7 +12,7 @@ int Length(List *list) {
 	return list->size;
 }
 
-int AppendNode(List *list, int data) {
+int ListAppendNode(List *list, int data) {
 	Node *newNode = (Node*)malloc(sizeof(Node));
 	newNode->data = data;
 	newNode->next = NULL;
@@ -33,7 +33,7 @@ int AppendNode(List *list, int data) {
 	return 1;
 }
 
-int InsertNode(List *list, int index, int data) {	/// index (0 to n)
+int ListInsertNode(List *list, int index, int data) {	/// index (0 to n)
 	if (index > MAX_INDEX || index < 0) {
 		printf("Out Of Range Error : index %d\n", index);
 		return -1;
@@ -69,7 +69,7 @@ void PrintList(List *list) {
 	puts("");
 }
 
-int RemoveNode(List *list, int index) {
+int ListRemoveNode(List *list, int index) {
 	Node *node = list->head;
 
 	if (index < 0 || index > MAX_INDEX) {

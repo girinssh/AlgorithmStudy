@@ -14,11 +14,11 @@ typedef struct List {
 
 List* Init_List(void);
 
-int AppendNode(List *list, int data);
-int InsertNode(List *list, int index, int data);
+int ListAppendNode(List *list, int data);
+int ListInsertNode(List *list, int index, int data);
 					
 void PrintList(List *list);
 				
-int RemoveNode(List *list, int index);
+int ListRemoveNode(List *list, int index);
 
 //int Retrieve(List *list, int position);

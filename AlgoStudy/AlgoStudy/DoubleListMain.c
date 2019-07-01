@@ -16,7 +16,7 @@ int main(void) {
 	for (int i = 0; i < n; i++) {
 		int tmp;
 		_ = scanf("%d", &tmp);
-		AppendNode(&a, tmp);
+		ListAppendNode(&a, tmp);
 	}
 
 	while (1) {
@@ -39,7 +39,7 @@ int main(void) {
 			int data;
 			_ = scanf("%d", &data);
 
-			int state = AppendNode(&a, data);
+			int state = ListAppendNode(&a, data);
 			state == 1 ? puts("추가되었습니다.") : puts("오류가 발생했습니다.");
 			break;
 		}
@@ -52,7 +52,7 @@ int main(void) {
 			int index;
 			_ = scanf("%d", &index);
 
-			int state = InsertNode(&a, index, data);
+			int state = ListInsertNode(&a, index, data);
 			state == 1 ? puts("추가되었습니다.") : puts("오류가 발생했습니다.");
 			break;
 		}
@@ -61,7 +61,7 @@ int main(void) {
 			int index;
 			_ = scanf("%d", &index);
 
-			int state = RemoveNode(&a, index);
+			int state = ListRemoveNode(&a, index);
 			state == 1 ? puts("제거되었습니다.") : puts("오류가 발생했습니다.");
 			break;
 		}
