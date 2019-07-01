@@ -9,7 +9,7 @@ typedef struct DNode {
 typedef struct DList {
 	int size;
 	DNode* head;
-};
+}DList;
 
 DList* Init_DList(void);
 
