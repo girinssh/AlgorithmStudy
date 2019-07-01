@@ -7,15 +7,15 @@ int main(void) {
 	int n;
 
 	printf("처음 리스트의 크기를 입력해주세요 : ");
-	scanf("%d", &n);
+	int _ = scanf("%d", &n);
 
 	printf("리스트에 들어갈 숫자들을 입력해주세요 : ");
 
 	//리스트 초기화 부분
-	List a = Init_List();
+	List* a = Init_List();
 	for (int i = 0; i < n; i++) {
 		int tmp;
-		scanf("%d", &tmp);
+		_ = scanf("%d", &tmp);
 		AppendNode(&a, tmp);
 	}
 
@@ -30,14 +30,14 @@ int main(void) {
 			puts("5.종료");
 			puts("6.화면 청소");
 			printf("//> : ");
-			scanf("%d", &sel);
+			_ = scanf("%d", &sel);
 		}
 		puts("");
 		switch (sel) {
 		case 1: {
 			printf("데이터를 입력하세요 : ");
 			int data;
-			scanf("%d", &data);
+			_ = scanf("%d", &data);
 
 			int state = AppendNode(&a, data);
 			state == 1 ? puts("추가되었습니다.") : puts("오류가 발생했습니다.");
@@ -46,11 +46,11 @@ int main(void) {
 		case 2: {
 			printf("데이터를 입력하세요 : ");
 			int data;
-			scanf("%d", &data);
+			_ = scanf("%d", &data);
 
 			printf("인덱스를 입력하세요(0부터) : ");
 			int index;
-			scanf("%d", &index);
+			_ = scanf("%d", &index);
 
 			int state = InsertNode(&a, index, data);
 			state == 1 ? puts("추가되었습니다.") : puts("오류가 발생했습니다.");
@@ -59,7 +59,7 @@ int main(void) {
 		case 3: {
 			printf("인덱스를 입력하세요 : ");
 			int index;
-			scanf("%d", &index);
+			_ = scanf("%d", &index);
 
 			int state = RemoveNode(&a, index);
 			state == 1 ? puts("제거되었습니다.") : puts("오류가 발생했습니다.");

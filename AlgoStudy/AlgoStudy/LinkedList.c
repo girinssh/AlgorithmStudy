@@ -1,9 +1,9 @@
 #include "LinkedList.h"
 #define MAX_INDEX Length(list)
-List Init_List(void) {
-	List l;
-	l.size = 0;
-	l.head = NULL;
+List* Init_List(void) {
+	List* l = (List*)malloc(sizeof(List));
+	l->size = 0;
+	l->head = NULL;
 
 	return l;
 }

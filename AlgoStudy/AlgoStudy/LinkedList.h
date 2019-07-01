@@ -12,7 +12,7 @@ typedef struct List {
 	Node *head;
 }List;
 
-List Init_List(void);
+List* Init_List(void);
 
 int AppendNode(List *list, int data);
 int InsertNode(List *list, int index, int data);
