@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AlgoStudy", "AlgoStudy\AlgoStudy.vcxproj", "{55D27840-4C35-45BB-8BC8-C216A3647043}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55D27840-4C35-45BB-8BC8-C216A3647043}.Debug|x64.ActiveCfg = Debug|x64
+		{55D27840-4C35-45BB-8BC8-C216A3647043}.Debug|x64.Build.0 = Debug|x64
+		{55D27840-4C35-45BB-8BC8-C216A3647043}.Debug|x86.ActiveCfg = Debug|Win32
+		{55D27840-4C35-45BB-8BC8-C216A3647043}.Debug|x86.Build.0 = Debug|Win32
+		{55D27840-4C35-45BB-8BC8-C216A3647043}.Release|x64.ActiveCfg = Release|x64
+		{55D27840-4C35-45BB-8BC8-C216A3647043}.Release|x64.Build.0 = Release|x64
+		{55D27840-4C35-45BB-8BC8-C216A3647043}.Release|x86.ActiveCfg = Release|Win32
+		{55D27840-4C35-45BB-8BC8-C216A3647043}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0674E151-9EEC-40A0-8D21-F80663487A2F}
+	EndGlobalSection
+EndGlobal
