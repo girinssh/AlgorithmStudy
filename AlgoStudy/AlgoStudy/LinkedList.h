@@ -20,5 +20,3 @@ int ListInsertNode(List *list, int index, int data);
 void PrintList(List *list);
 				
 int ListRemoveNode(List *list, int index);
-
-//int Retrieve(List *list, int position);
