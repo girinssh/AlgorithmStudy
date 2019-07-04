@@ -30,12 +30,21 @@
     <ClCompile Include="assignment\Bae\DoubleListMain.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="assignment\ShinHyeJin\DoubleLinkedList.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="assignment\ShinHyeJin\Main.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LinkedList.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
     <ClInclude Include="DoubleLinkedList.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="assignment\ShinHyeJin\DoubleLinkedList.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>
