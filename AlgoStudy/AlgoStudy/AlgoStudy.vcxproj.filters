@@ -27,6 +27,9 @@
     <ClCompile Include="singleListMain.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="assignment\Bae\DoubleListMain.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LinkedList.h">
