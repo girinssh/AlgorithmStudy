@@ -12,7 +12,7 @@ int main(void) {
 	printf("리스트에 들어갈 숫자들을 입력해주세요 : ");
 
 	//리스트 초기화 부분
-	List* a = Init_List();
+	Stack* a = Init_List();
 	for (int i = 0; i < n; i++) {
 		int tmp;
 		_ = scanf("%d", &tmp);

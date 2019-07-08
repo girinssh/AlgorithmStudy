@@ -1,18 +1,18 @@
 #include "LinkedList.h"
 #define MAX_INDEX Length(list)
-List* Init_List(void) {
-	List* l = (List*)malloc(sizeof(List));
+Stack* Init_List(void) {
+	Stack* l = (Stack*)malloc(sizeof(Stack));
 	l->size = 0;
 	l->head = NULL;
 
 	return l;
 }
 
-int Length(List *list) {
+int Length(Stack *list) {
 	return list->size;
 }
 
-int ListAppendNode(List *list, int data) {
+int ListAppendNode(Stack *list, int data) {
 	Node *newNode = (Node*)malloc(sizeof(Node));
 	newNode->data = data;
 	newNode->next = NULL;
@@ -33,7 +33,7 @@ int ListAppendNode(List *list, int data) {
 	return 1;
 }
 
-int ListInsertNode(List *list, int index, int data) {	/// index (0 to n)
+int ListInsertNode(Stack *list, int index, int data) {	/// index (0 to n)
 	if (index > MAX_INDEX || index < 0) {
 		printf("Out Of Range Error : index %d\n", index);
 		return -1;
@@ -61,7 +61,7 @@ int ListInsertNode(List *list, int index, int data) {	/// index (0 to n)
 	return 1;
 }
 
-void PrintList(List *list) {
+void PrintList(Stack *list) {
 	Node *n = list->head;
 
 	while (n != NULL) {
@@ -71,7 +71,7 @@ void PrintList(List *list) {
 	puts("");
 }
 
-int ListRemoveNode(List *list, int index) {
+int ListRemoveNode(Stack *list, int index) {
 	Node *node = list->head;
 	if (index < 0 || index > MAX_INDEX) {
 		printf("Out Of Range Error : index %d\n", index);

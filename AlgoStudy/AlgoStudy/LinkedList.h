@@ -7,16 +7,16 @@ typedef struct Node{
 	struct Node* next;
 }Node;
 
-typedef struct List {
+typedef struct Stack {
 	int size;
 	Node *head;
 }List;
 
-List* Init_List(void);
+Stack* Init_List(void);
 
-int ListAppendNode(List *list, int data);
-int ListInsertNode(List *list, int index, int data);
+int ListAppendNode(Stack *list, int data);
+int ListInsertNode(Stack *list, int index, int data);
 					
-void PrintList(List *list);
+void PrintList(Stack *list);
 				
-int ListRemoveNode(List *list, int index);
+int ListRemoveNode(Stack *list, int index);

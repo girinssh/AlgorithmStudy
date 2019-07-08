@@ -1,8 +1,2 @@
-﻿  DoubleLinkedList.c
-D:\Git\AlgorithmStudy\AlgoStudy\AlgoStudy\assignment\ShinHyeJin\DoubleLinkedList.c(33): warning C4133: '=': 'Node *'과(와) 'NOde *' 사이의 형식이 호환되지 않습니다.
-D:\Git\AlgorithmStudy\AlgoStudy\AlgoStudy\assignment\ShinHyeJin\DoubleLinkedList.c(50): warning C4133: '=': 'Node *'과(와) 'NOde *' 사이의 형식이 호환되지 않습니다.
-D:\Git\AlgorithmStudy\AlgoStudy\AlgoStudy\assignment\ShinHyeJin\DoubleLinkedList.c(62): warning C4133: '=': 'Node *'과(와) 'NOde *' 사이의 형식이 호환되지 않습니다.
-D:\Git\AlgorithmStudy\AlgoStudy\AlgoStudy\assignment\ShinHyeJin\DoubleLinkedList.c(64): warning C4133: '=': 'Node *'과(와) 'NOde *' 사이의 형식이 호환되지 않습니다.
-D:\Git\AlgorithmStudy\AlgoStudy\AlgoStudy\assignment\ShinHyeJin\DoubleLinkedList.c(78): warning C4133: '=': 'NOde *'과(와) 'Node *' 사이의 형식이 호환되지 않습니다.
-D:\Git\AlgorithmStudy\AlgoStudy\AlgoStudy\assignment\ShinHyeJin\DoubleLinkedList.c(115): warning C4133: '=': 'Node *'과(와) 'NOde *' 사이의 형식이 호환되지 않습니다.
+﻿  Stack.c
   AlgoStudy.vcxproj -> D:\Git\AlgorithmStudy\AlgoStudy\Debug\AlgoStudy.exe
