@@ -65,6 +65,7 @@ int main(void) {
 	for (int i = 0; i < 5; i++) {
 		Push(s, i);
 	}
+	PrintTop(s);
 	for (int i = 0; i < 5; i++) {
 		printf("%d \n", Pop(s));
 	}
