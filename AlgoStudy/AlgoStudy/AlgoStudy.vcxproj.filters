@@ -48,6 +48,12 @@
     <ClCompile Include="CalculatorByStack.c">
       <Filter>소스 파일\Assignment</Filter>
     </ClCompile>
+    <ClCompile Include="Queue.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="QueueMain.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LinkedList.h">
@@ -57,6 +63,9 @@
       <Filter>소스 파일</Filter>
     </ClInclude>
     <ClInclude Include="Stack.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Queue.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>

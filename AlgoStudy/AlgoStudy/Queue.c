@@ -16,8 +16,10 @@ void Push(Queue* q, int data) {
 		q->first = newNode;
 		q->rear = newNode;
 	}
-	else
+	else {
 		q->rear->next = newNode;
+		q->rear = q->rear->next;
+	}
 	q->size += 1;
 	return;
 }
