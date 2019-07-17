@@ -54,6 +54,9 @@
     <ClCompile Include="QueueMain.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="CircledQueue.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LinkedList.h">
@@ -66,6 +69,9 @@
       <Filter>소스 파일</Filter>
     </ClInclude>
     <ClInclude Include="Queue.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CircledQueue.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>

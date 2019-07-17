@@ -12,14 +12,14 @@ typedef struct Queue {
 	int size;
 	Node* first;
 	Node* rear;
-}Queue;
+}CircledQueue;
 
-Queue* Init_Queue(void);
+CircledQueue* Init_Queue(void);
 
-void Enqueue(Queue* q, int data);
+void Enqueue(CircledQueue* q, int data);
 
-int Dequeue(Queue* q);
+int Dequeue(CircledQueue* q);
 
-int Front(Queue* q);
-int Rear(Queue* q);
-int Size(Queue *q);
+int Front(CircledQueue* q);
+int Rear(CircledQueue* q);
+int Size(CircledQueue *q);

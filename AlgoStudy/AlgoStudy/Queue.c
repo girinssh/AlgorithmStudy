@@ -25,6 +25,9 @@ void Enqueue(Queue* q, int data) {
 }
 
 int Dequeue(Queue* q) {
+	if (q->size == 0) {
+		return;
+	}
 	int data = q->first->data;
 	Node* del_node = q->first;
 	q->first = del_node->next;
