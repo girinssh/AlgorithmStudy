@@ -16,9 +16,9 @@ typedef struct Queue {
 
 Queue* Init_Queue(void);
 
-void Push(Queue* q, int data);
+void Enqueue(Queue* q, int data);
 
-int Pull(Queue* q);
+int Dequeue(Queue* q);
 
 int Front(Queue* q);
 int Rear(Queue* q);

@@ -8,7 +8,7 @@ Queue* Init_Queue(void) {
 	return q;
 }
 
-void Push(Queue* q, int data) {
+void Enqueue(Queue* q, int data) {
 	Node* newNode = (Node*)malloc(sizeof(Node));
 	newNode->data = data;
 	newNode->next = NULL;
@@ -24,7 +24,7 @@ void Push(Queue* q, int data) {
 	return;
 }
 
-int Pull(Queue* q) {
+int Dequeue(Queue* q) {
 	int data = q->first->data;
 	Node* del_node = q->first;
 	q->first = del_node->next;

@@ -5,11 +5,13 @@
 int main(void) {
 	Queue* q = Init_Queue();
 
-	Push(q, 1);
-	Push(q, 2);
+	Enqueue(q, 1);
+	Enqueue(q, 2);
 	printf("%d\n", Front(q));
 	printf("%d\n", Rear(q));
-
+	printf("%d\n", Dequeue(q));
+	printf("%d\n", Dequeue(q));
+	
 	system("pause");
 	return 0;
 }
